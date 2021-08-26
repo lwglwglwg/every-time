@@ -15,7 +15,7 @@ import 'vant/lib/index.css';
 Vue.use(Vant);
 Vue.use(ElementUI);
 // 把axios挂载到Vue的原型上，这样的话项目中任何一个组件都可以使用了
-Vue.prototype.$http = axios
+Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
 new Vue({

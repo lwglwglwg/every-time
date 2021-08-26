@@ -1,6 +1,6 @@
 <template>
     <div>
-首页
+咨询
     </div>
 </template>
 

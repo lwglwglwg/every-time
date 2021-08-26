@@ -7,31 +7,34 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    component: () => import('@/views/index'),
-    // children:[
-    //   {
-    //     path: '/home',
-    //     component: () => import('@/views/home')
-    //   },
-    //   {
-    //     path: '/course',
-    //     component: () => import('@/views/course')
-    //   },
-    //   {
-    //     path: '/consult',
-    //     component: () => import('@/views/consult')
-    //   },
-    //   {
-    //     path: '/books',
-    //     component: () => import('@/views/books')
-    //   },
-    //   {
-    //     path: '/my',
-    //     component: () => import('@/views/my')
-    //   },
-    // ]
+    component: () => import('@/views/home'),
+    children:[
+      {
+        path: '/index',
+        component: () => import('@/views/index')
+      },
+      {
+        path: '/class',
+        component: () => import('@/views/class')
+      },
+      {
+        path: '/zx',
+        component: () => import('@/views/zx')
+      },
+      {
+        path: '/books',
+        component: () => import('@/views/books')
+      },
+      {
+        path: '/my',
+        component: () => import('@/views/my')
+      },
+    ]
   },
- 
+ {
+  path: '/login',
+  component: () => import('@/views/login'),
+ },
   {
     path: '*',
     redirect: '/'
